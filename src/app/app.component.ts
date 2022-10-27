@@ -1,10 +1,33 @@
 import { Component } from '@angular/core';
+import {configCSS} from './models/styleModels';
+
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css','../assets/font-awesome-4.7.0/css/font-awesome.css']
 })
 export class AppComponent {
-  title = 'Angular';
+  public title:string="angular";
+  public componentb:boolean=true;
+  public config:any;
+  public description:string;
+
+
+  constructor(){
+
+    this.config=configCSS;
+    this.description=this.config.description;
+
+
+
+  }
+
+  /**
+   * hideComponent
+   */
+  public hideComponent() {
+    this.componentb=false;
+  }
 }
