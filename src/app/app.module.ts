@@ -6,6 +6,7 @@ import { SingersComponent } from './singers/singers.component';
 
 
 import { AppComponent } from './app.component';
+import { HighlightDirective } from './Directives/highlight.directive';
 
 
 
@@ -16,6 +17,7 @@ import { AppComponent } from './app.component';
     AppComponent,
     routingComponents,
     SingersComponent,
+    HighlightDirective,
 
 
 

@@ -1,1 +1,31 @@
-<p>second works!</p>
+<h4>Ejercicio 5, usando el evento keyup y evento click desplegar la palabra en el cuadro de texto</h4>
+<div>
+  <label for="keyup">Escribir aqui y dar enter:</label><br>
+  <input type="text" id="keyup" [(ngModel)]="events" (keyup.enter)="keyUp()" ><br>
+  <button (click)="keyUp()">Enter</button><br>
+  <span>{{toPrint}}</span>
+</div><hr>
+
+<h4>Ejercicio 6, usando la directiva ngClass y ngIf, poder modificar los valores y darles clases segun precio (mayor a 20 rojo y verde si no)</h4>
+<input type="number" placeholder="Precio de manzana" [(ngModel)]="priceC0" (keyup.enter)="pricesChange0()"><label >Precio de la manzana</label><br>
+<input type="number" placeholder="Precio de manzana" [(ngModel)]="priceC1" (keyup.enter)="pricesChange1()"><label >Precio de la pera</label><br>
+<input type="number" placeholder="Precio de manzana" [(ngModel)]="priceC2" (keyup.enter)="pricesChange2()"><label >Precio del platano</label><br>
+  <ul id="fruitsList"  >
+    <li *ngFor="let fruit of fruits;let i=index">
+    <span>{{fruit}}: </span>
+    <span [ngClass]="{
+      'red':prices[i]>=20
+    }">{{prices[i]}}$</span>
+</li>
+  </ul><hr>
+  <h4>Ejercicio 7, construir una directiva de atributo que subraye palabras al pasar el mouse </h4>
+  <p [Highlight]="color">Pasa el mouse por aqui¡¡</p>
+
+  <h4>Ejerciccio 8, con la directiva anterior cambiar el color al subrayar por el usuario</h4>
+  <div>Selecciona el color: <br>
+    <input type="number" [(ngModel)]="R">Rojo
+    <input type="number" [(ngModel)]="G">Verde
+    <input type="number" [(ngModel)]="B">Azul
+    <button (click)="colorPick()">Cambiar color</button>
+  </div>
+
