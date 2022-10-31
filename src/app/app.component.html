@@ -1,13 +1,21 @@
-<div [ngStyle]="{'background':config.background, 'border':config.border}">
-<h3>Primer paso con angular</h3>
-<h2>Bienvenido al proyecto {{title}} </h2>
-<a href= "../../../index.html" target="_self"><i id="homebtn" class="fa fa-home" aria-hidden="false"></i></a>
-<!--
+<section class="container">
 
--->
+<div [ngStyle]="{'background':config.background, 'border':config.border}">
+
+<h2>Bienvenido al proyecto {{title}} </h2>
+<nav class="navMenu">
+  <ol>
+
+    <li><a [routerLink]="['/First']" [routerLinkActive]="['linkactive']">Primer pagina</a></li>
+    <li><a [routerLink]="['/Second']" [routerLinkActive]="['linkactive']">Segunda pagina</a></li>
+  </ol>
+</nav>
+
 <router-outlet></router-outlet>
 </div>
 
+
+</section>
 
 
 

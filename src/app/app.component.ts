@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { homedir } from 'os';
 import {configCSS} from './models/styleModels';
 
 
@@ -31,4 +32,8 @@ export class AppComponent {
   public hideComponent() {
     this.componentb=false;
   }
+
+
 }
+
+
