@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule, routingComponents, appRoutingProviders  } from './app-routing.module';
 import { SingersComponent } from './singers/singers.component';
+import {MatSliderModule} from '@angular/material/slider'
 
 
 import { AppComponent } from './app.component';
-import { HighlightDirective } from './Directives/highlight.directive';
+import { HighlightDirective} from './Directives/highlight.directive';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -19,14 +21,13 @@ import { HighlightDirective } from './Directives/highlight.directive';
     SingersComponent,
     HighlightDirective,
 
-
-
-
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatSliderModule
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]

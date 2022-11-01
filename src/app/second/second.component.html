@@ -19,13 +19,24 @@
 </li>
   </ul><hr>
   <h4>Ejercicio 7, construir una directiva de atributo que subraye palabras al pasar el mouse </h4>
-  <p [Highlight]="color">Pasa el mouse por aqui¡¡</p>
+  <p class="toHighlight"[Highlight]="color">Pasa el mouse por aqui¡¡</p>
 
-  <h4>Ejerciccio 8, con la directiva anterior cambiar el color al subrayar por el usuario</h4>
+  <h4>Ejercicio 8, Crear un input para modificar el color de la directiva anterior</h4>
   <div>Selecciona el color: <br>
-    <input type="number" [(ngModel)]="R">Rojo
-    <input type="number" [(ngModel)]="G">Verde
-    <input type="number" [(ngModel)]="B">Azul
-    <button (click)="colorPick()">Cambiar color</button>
+    <div id="box" [ngStyle]="{'background-color':color}"> </div>
+
+    <mat-slider min="0" max="255" step="1" [(ngModel)]="R" thumbLabel tickInterval="1" id="redslider"></mat-slider>
+    <mat-slider min="0" max="255" step="1" [(ngModel)]="G" thumbLabel tickInterval="1" id="greenslider"></mat-slider>
+    <mat-slider min="0" max="255" step="1" [(ngModel)]="B" thumbLabel tickInterval="1" id="blueslider"></mat-slider>
   </div>
 
+  <h4>Ejercicio 9, mostrar algo cuando un usuario se identificado y algo diferente cuando no lo sea</h4>
+
+<div *ngIf="Identified; then yesIdentified else noIdentified"></div>
+
+<ng-template #yesIdentified ><p>Identificado</p>
+<button (click)="unIdentify()">Salir</button>
+</ng-template>
+<ng-template  #noIdentified><p>No estas identificado</p>
+<button (click)="Identify()">Identificaorse</button>
+</ng-template>

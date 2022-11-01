@@ -1,3 +1,38 @@
 .red{
   background-color: red;
 }
+
+#box{
+  display: block;
+  width: 500px;
+  height: 100px;
+  position:relative;
+  left: 30px;
+  margin: 10px;
+}
+
+#redslider{
+  color: red !important;
+  background-color: red;
+
+}
+#blueslider{
+  color: blue !important;
+  background-color: blue;
+
+}
+#greenslider{
+  color: green !important;
+  background-color: green;
+
+}
+
+mat-slider{
+  margin: 10px;
+}
+
+.toHighlight{
+  display: block;
+  width: 180px;
+  height: 30px;
+}

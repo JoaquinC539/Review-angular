@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, DoCheck } from '@angular/core';
+import { flatMap } from 'rxjs';
 
 
 @Component({
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './second.component.html',
   styleUrls: ['./second.component.css']
 })
-export class SecondComponent implements OnInit {
+export class SecondComponent implements OnInit,DoCheck {
   public events:string="";
   public toPrint:string="";
   public prices: number[];
@@ -14,6 +15,7 @@ export class SecondComponent implements OnInit {
   public priceC1:number=0;
   public priceC2:number=0;
   public fruits:string[];
+  public Identified:boolean=false;
 
   public R:number=147;
   public G:number=158;
@@ -41,9 +43,22 @@ export class SecondComponent implements OnInit {
   pricesChange2(){
     this.prices[2]=this.priceC2;
   }
-  colorPick(){
 
+  ngDoCheck(){
+
+    this.coloring(this.R,this.G,this.B);
+  }
+  coloring(R:number,G:number,B:number) {
     this.color=`rgb(${this.R},${this.G},${this.B})`
   }
+
+  unIdentify(){
+    this.Identified=false;
+  }
+  Identify(){
+    this.Identified=true;
+  }
 }
+
+
 
