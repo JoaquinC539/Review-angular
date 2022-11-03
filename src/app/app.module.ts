@@ -3,7 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule, routingComponents, appRoutingProviders  } from './app-routing.module';
 import { SingersComponent } from './singers/singers.component';
-import {MatSliderModule} from '@angular/material/slider'
+import {MatSliderModule} from '@angular/material/slider';
+import {HttpClientModule} from "@angular/common/http";
 
 
 import { AppComponent } from './app.component';
@@ -29,7 +30,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatSliderModule
+    MatSliderModule,
+    HttpClientModule
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]

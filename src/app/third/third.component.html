@@ -1,2 +1,18 @@
-<h4>Ejercico 10, crear un servicio (a partir de un modelo) de stock de productos importar la información desde ella</h4>
+<h3>Ejercico 10, crear un servicio (a partir de un modelo) de stock de productos importar la información desde ella</h3>
 <p *ngFor="let shoe of shoes;let i=index">{{shoe.model}}, Precio: {{shoe.price}}, tamaños:{{shoe.sizes}}, disponibilidad <strong>{{stocks[i]}}</strong>, agujeta: {{shoelaces[i]}}<span></span></p>
+<hr>
+
+<h3>Ejercicio 11, crear un servicio capaz de hacer peticiones Ajax por medio del cliente Http</h3>
+<p><a href="https://reqres.in/" target="_blank">Fake API</a></p>
+Buscar un usuario entre los 12: <input type="number" [(ngModel)]="usernumber" (keyup.enter)="getUser(usernumber)" >
+<button (click)="getUser(usernumber)">Buscar usuario</button><br>
+<div *ngIf="user">
+  <h4>{{user.first_name}} {{user.last_name }}</h4><br>
+  <img src="{{user.avatar}}">
+</div><br>
+<h3>Ejercicio 12, usar una "pipe" de fecha y darle formato</h3><br>
+<span>{{date| date:"dd/MMMM/y" }}</span>
+
+
+
+
