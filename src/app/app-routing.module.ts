@@ -5,6 +5,7 @@ import { HooksComponent } from './hooks/hooks.component';
 import { SingersComponent } from './singers/singers.component';
 import { ThirdComponent } from './third/third.component';
 import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 
@@ -17,6 +18,7 @@ const routes:Routes=[
   {path:'',component:HomeComponent},
   {path:"Home",component:HomeComponent},
   {path:"Third",component:ThirdComponent},
+  {path:"Contact",component:ContactComponent}
 
 ];
 
@@ -27,6 +29,6 @@ const routes:Routes=[
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents=[FirstComponent,HooksComponent,SecondComponent,SingersComponent,ThirdComponent,HomeComponent];
+export const routingComponents=[FirstComponent,HooksComponent,SecondComponent,SingersComponent,ThirdComponent,HomeComponent,ContactComponent];
 export const appRoutingProviders:any[]=[];
 

@@ -10,6 +10,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { AppComponent } from './app.component';
 import { HighlightDirective} from './Directives/highlight.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ContactComponent } from './contact/contact.component';
 
 
 
@@ -22,6 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     routingComponents,
     SingersComponent,
     HighlightDirective,
+    ContactComponent,
 
 
   ],
