@@ -11,7 +11,7 @@ import {configCSS} from './models/styleModels';
   styleUrls: ['./app.component.css','../assets/font-awesome-4.7.0/css/font-awesome.css']
 })
 export class AppComponent {
-  public title:string="angular";
+
   public componentb:boolean=true;
   public config:any;
   public description:string;

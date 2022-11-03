@@ -1,0 +1,17 @@
+.background{
+  background-image: url("../../assets/orange.jpg");
+  background-size: 100% auto;
+  size: 500px;
+  height: 650px;
+  width: 100%;
+}
+
+#welcome{
+font-size: 35px;
+color: aliceblue;
+margin-top: 200px;
+position: absolute;
+top: 28%;
+left: 26%;
+font-weight: bold;
+}

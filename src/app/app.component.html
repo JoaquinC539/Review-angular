@@ -2,12 +2,13 @@
 
 <div [ngStyle]="{'background':config.background, 'border':config.border}">
 
-<h2>Bienvenido al proyecto {{title}} </h2>
+<h2>Bienvenido al proyecto </h2>
 <nav class="navMenu">
   <ol>
-
+    <li><a [routerLink]="['/Home']" [routerLinkActive]="['linkactive']">Home</a></li>
     <li><a [routerLink]="['/First']" [routerLinkActive]="['linkactive']">Primer pagina</a></li>
     <li><a [routerLink]="['/Second']" [routerLinkActive]="['linkactive']">Segunda pagina</a></li>
+    <li><a [routerLink]="['/Third']" [routerLinkActive]="['linkactive']">Tercer pagina</a></li>
   </ol>
 </nav>
 
