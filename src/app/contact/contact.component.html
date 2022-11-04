@@ -1,1 +1,14 @@
-<p>contact works!</p>
+<h2>Contacto</h2>
+
+<form #formContact="ngForm" (ngSubmit)="Submit(formContact)">
+  <label for="name">Nombre</label><br>
+  <input type="text" name="name" #name="ngModel" [(ngModel)]="contact.name" required pattern="[a-zA-Z]+"><br>
+  <span *ngIf="name.touched && !name.valid">El nombre es obligatorio <br></span>
+  <label for="email">Email</label><br>
+  <input type="email" name="email" #email="ngModel" [(ngModel)]="contact.email" required=""><br>
+  <span *ngIf="email.touched && !email.valid">El email no es valido <br></span>
+  <label for="message">Mensaje</label><br>
+  <input type="textaraea" name="message" #message="ngModel" [(ngModel)]="contact.message" required="[a-zA-Z]+"><br >
+  <span *ngIf="message.touched && !message.valid">El mensaje es obligatorio <br></span>
+  <input type="submit" value="Enviar" [disabled]="!formContact.form.valid">
+</form>

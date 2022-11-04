@@ -12,5 +12,10 @@ export class RequestService{
       return this._http.get(this.url+"api/users/"+user);
     }
 
+    sendContact(contactData:any):Observable<any>{
+      let jsonData=JSON.stringify(contactData);
+      return this._http.post(this.url+"api/users",jsonData);
+    }
+
 }
 
