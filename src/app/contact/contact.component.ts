@@ -12,16 +12,17 @@ export class ContactComponent implements OnInit {
   public contact:Contact
 
   constructor(private _http:RequestService) {
-    this.contact=new Contact("","","")
+    this.contact=new Contact("","","","",[""]);
+
   }
 
   ngOnInit(): void {
+
   }
   Submit(formData:any){
-    console.log(this.contact);
     this._http.sendContact(this.contact).subscribe(
-      response=>{console.log(response,this.contact)},
-      error=>{console.log(error)}
+      response=>{console.log("respuesta: ",response,this.contact)},
+      error=>{console.log("error",error)}
     );
 
 

@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, } from '@angular/common/http';
 import { Observable} from 'rxjs';
+
+
 
 @Injectable()
 export class RequestService{
@@ -13,9 +15,9 @@ export class RequestService{
     }
 
     sendContact(contactData:any):Observable<any>{
-      let jsonData=JSON.stringify(contactData);
-      return this._http.post(this.url+"api/users",jsonData);
+      this.url="http://localhost:3000/api/contact"
+      return this._http.post(this.url,contactData);
     }
 
-}
+  }
 
