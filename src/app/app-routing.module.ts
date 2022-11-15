@@ -1,4 +1,4 @@
-import { NgModule, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FirstComponent } from './Primer componente/First.component';
 import { HooksComponent } from './hooks/hooks.component';
@@ -6,6 +6,8 @@ import { SingersComponent } from './singers/singers.component';
 import { ThirdComponent } from './third/third.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
+
+
 
 
 

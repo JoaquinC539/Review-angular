@@ -1,0 +1,74 @@
+
+.shoemssg{
+margin-top: 35px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 25px;
+color: rgb(61, 17, 17);
+}
+
+.footer{
+  font-family: Helvetica,Arial;
+	color: white;
+	height: 47px;
+	background: rgba(51, 51, 51, 0.7);
+	margin: 0px auto;
+	width: 85%;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-top: 10px;
+	line-height: 47px;
+}
+
+.footer span{
+  float: right;
+}
+
+.form{
+  padding: 20px;
+  border: solid rgb(231, 106, 23);
+}
+.form label{
+margin-top: 10px;
+text-indent: 3px;
+font-size: larger;
+}
+.form input{
+  margin:7px;
+  width: 200px;
+}
+.sbutton{
+  height: 25px;
+width: 100px;
+margin-top: 10px;
+align-items: center;
+}
+.plane{
+  color: aquamarine;
+  margin-right: 8x;
+}
+
+#slider-container{
+  display: block;
+  width: 700px;
+
+}
+.bxslider img{
+  height: 400px;
+  width: 700px;
+}
+.to-align{
+  display:inline-block;
+  padding: 20px;
+}
+#parent{
+  display: flex;
+  height: 480;
+}
+#slider-container{
+  margin-left: 200px;
+}
+h2{
+  margin-left: 8px;
+  font-size: 25px;
+  color: rgb(190, 64, 18);
+}

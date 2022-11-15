@@ -1,31 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { AppRoutingModule, routingComponents, appRoutingProviders  } from './app-routing.module';
-import { SingersComponent } from './singers/singers.component';
+import { AppRoutingModule, routingComponents,  } from './app-routing.module';
 import {MatSliderModule} from '@angular/material/slider';
 import {HttpClientModule} from "@angular/common/http";
-
-
 import { AppComponent } from './app.component';
 import { HighlightDirective} from './Directives/highlight.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ContactComponent } from './contact/contact.component';
-
-
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
-    SingersComponent,
     HighlightDirective,
-    ContactComponent,
-
-
   ],
   imports: [
     BrowserModule,
@@ -35,7 +21,7 @@ import { ContactComponent } from './contact/contact.component';
     MatSliderModule,
     HttpClientModule
   ],
-  providers: [appRoutingProviders],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
