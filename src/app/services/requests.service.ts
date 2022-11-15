@@ -18,6 +18,10 @@ export class RequestService{
       this.url="http://localhost:3000/api/contact"
       return this._http.post(this.url,contactData);
     }
+    getlogin(user:string):Observable<any>{
+      this.url="http://localhost:3000/api/login/"
+      return this._http.get(this.url+user)
+    }
 
   }
 

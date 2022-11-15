@@ -6,11 +6,7 @@ import { SingersComponent } from './singers/singers.component';
 import { ThirdComponent } from './third/third.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
-
-
-
-
-
+import { LoginComponent } from './login/login.component';
 import { SecondComponent } from './second/second.component';
 
 const routes:Routes=[
@@ -20,7 +16,8 @@ const routes:Routes=[
   {path:'',component:HomeComponent},
   {path:"Home",component:HomeComponent},
   {path:"Third",component:ThirdComponent},
-  {path:"Contact",component:ContactComponent}
+  {path:"Contact",component:ContactComponent},
+  {path:"login",component:LoginComponent}
 
 ];
 
@@ -31,6 +28,7 @@ const routes:Routes=[
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents=[FirstComponent,HooksComponent,SecondComponent,SingersComponent,ThirdComponent,HomeComponent,ContactComponent];
+export const routingComponents=[FirstComponent,HooksComponent,SecondComponent,SingersComponent,ThirdComponent,HomeComponent,ContactComponent,
+  LoginComponent];
 export const appRoutingProviders:any[]=[];
 

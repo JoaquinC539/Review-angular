@@ -7,11 +7,13 @@ import {HttpClientModule} from "@angular/common/http";
 import { AppComponent } from './app.component';
 import { HighlightDirective} from './Directives/highlight.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
     HighlightDirective,
+
   ],
   imports: [
     BrowserModule,

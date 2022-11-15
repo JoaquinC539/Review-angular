@@ -31,10 +31,12 @@ export class ThirdComponent implements OnInit {
     this.stocks=this._stockService.getStocks();
     this.shoelaces=this._stockService.getShoelace();
     this.getUser(1);
+
+
   }
   getUser(usernumber:number){
     let request=this._http.getUser(usernumber).subscribe(
-      response=>{ this.user=response.data},
+      response=>{ this.user=response.data,console.log(response.data)},
       error=>{console.log(error)}
     );
   }
