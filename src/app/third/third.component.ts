@@ -36,7 +36,7 @@ export class ThirdComponent implements OnInit {
   }
   getUser(usernumber:number){
     let request=this._http.getUser(usernumber).subscribe(
-      response=>{ this.user=response.data,console.log(response.data)},
+      response=>{ this.user=response.data},
       error=>{console.log(error)}
     );
   }

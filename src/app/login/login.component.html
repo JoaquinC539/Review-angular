@@ -1,6 +1,20 @@
 <h1>Login para ver los usuarios registrados</h1>
-
-<form >
+<p *ngIf="login">Hola: {{user}}</p>
+<p *ngIf="error">{{errorcatched}}</p>
   <label for="user">Usuario: </label><br>
-  <input type="text" name="user">
-</form>
+  <input type="text" name="user" [(ngModel)]="user"><br>
+  <label for="password">Contraseña</label><br>
+  <input type="password"name="password" [(ngModel)]="password"><br>
+  <button (click)="getLogin(user,password)">Entrar</button><button (click)="logOut()">Logout</button><br>
+  <div *ngIf="login">
+    <ul>Lista de usuarios <br>
+      <li *ngFor="let user of activeusers;let i=index">{{user.name}}, {{user.last_name}}, email:{{user.email}}</li>
+    </ul>
+
+
+  </div>
+
+
+
+
+

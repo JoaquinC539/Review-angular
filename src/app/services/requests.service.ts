@@ -18,9 +18,13 @@ export class RequestService{
       this.url="http://localhost:3000/api/contact"
       return this._http.post(this.url,contactData);
     }
-    getlogin(user:string):Observable<any>{
+    getlogin(user:string,password:string):Observable<any>{
       this.url="http://localhost:3000/api/login/"
-      return this._http.get(this.url+user)
+      return this._http.get(this.url+user+"/"+password);
+    }
+    getUsers():Observable<any>{
+      this.url="http://localhost:3000/api/users"
+      return this._http.get(this.url);
     }
 
   }

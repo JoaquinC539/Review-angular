@@ -8,18 +8,38 @@ import { RequestService } from '../services/requests.service';
   providers:[RequestService]
 })
 export class LoginComponent implements OnInit {
-  public user:any
+  public user:string="";
+  public login:boolean;
+  public activeusers:any;
+  public password:string="";
+  public error:boolean=false
+  public errorcatched:string=""
 
-  constructor(private _http:RequestService) { }
-
+  constructor(private _http:RequestService) {this.login=false;}
   ngOnInit(): void {
-    this.getLogin("Manuel");
-    console.log(this.user);
 
   }
-  getLogin(user:string){
-    this._http.getlogin(user).subscribe(
-      response=>{this.user=response.users[0],console.log(response.users[0].user)}
-    )
-  }
+  getLogin(user:string,password:string){
+    this.error=false;
+    this.user="";
+    this.password="";
+    this._http.getlogin(user,password).subscribe(
+      response=>{
+        this.login=true;
+        this.activeusers=response;
+        this.getUsers()
+        return this.user=user;
+      },
+      (err)=>{this.error=true,this.errorcatched=(err.error.message)}
+      ); }
+
+  getUsers(){
+      this._http.getUsers().subscribe(
+        response=>{ this.activeusers=(response.users);}
+        );
+      }
+      logOut(){
+        return this.login=false
+      }
+
 }
