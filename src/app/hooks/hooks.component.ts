@@ -29,7 +29,7 @@ export class HooksComponent implements OnInit,DoCheck,OnDestroy {
     this.user2="Pamela";
   }
    ngOnDestroy(){
-    console.log("onDestroy ejecutdo");
+
 
   }
   public destroy(){
