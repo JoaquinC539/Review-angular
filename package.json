@@ -2,6 +2,7 @@
   "name": "angular",
   "version": "0.0.0",
   "scripts": {
+    "dev":"lite-server",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -22,6 +23,7 @@
     "@angular/router": "^14.2.10",
     "bxslider": "^4.2.14",
     "jquery": "^3.6.1",
+    "lite-server": "^2.6.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

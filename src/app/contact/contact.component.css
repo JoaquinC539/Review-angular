@@ -6,26 +6,12 @@ font-size: 25px;
 color: rgb(61, 17, 17);
 }
 
-.footer{
-  font-family: Helvetica,Arial;
-	color: white;
-	height: 47px;
-	background: rgba(51, 51, 51, 0.7);
-	margin: 0px auto;
-	width: 85%;
-	padding-left: 20px;
-	padding-right: 20px;
-	margin-top: 10px;
-	line-height: 47px;
-}
 
-.footer span{
-  float: right;
-}
 
 .form{
   padding: 20px;
   border: solid rgb(231, 106, 23);
+  display: inline-block;
 }
 .form label{
 margin-top: 10px;
@@ -71,4 +57,7 @@ h2{
   margin-left: 8px;
   font-size: 25px;
   color: rgb(190, 64, 18);
+}
+#snail{
+display: inline-block;
 }

@@ -47,7 +47,20 @@ h2{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 35px;
 }
-.login{
- margin-left: 900px;
+.footer{
+  font-family: Helvetica,Arial;
+	color: white;
+	height: 47px;
+	background: rgba(51, 51, 51, 0.7);
+	margin: 0px auto;
+	width: 85%;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-top: 10px;
+	line-height: 47px;
+}
+
+.footer span{
+  float: right;
 }
 
