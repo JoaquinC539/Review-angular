@@ -6,7 +6,7 @@
   <input type="text" name="user" [(ngModel)]="user"><br>
   <label for="password">Contraseña</label><br>
   <input type="password"name="password" [(ngModel)]="password"><br>
-  <button (click)="getLogin(user,password)">Entrar</button><button (click)="logOut()">Logout</button><br>
+  <button (click)="getLogin()">Entrar</button><button (click)="logOut()">Logout</button><br>
   <div *ngIf="login">
     <ul>Lista de usuarios <br>
       <li *ngFor="let user of activeusers;let i=index">{{i+1}}- {{user.name}}, {{user.last_name}}, email:{{user.email}}</li>

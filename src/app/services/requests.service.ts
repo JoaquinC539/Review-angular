@@ -7,24 +7,23 @@ import { Observable} from 'rxjs';
 @Injectable()
 export class RequestService{
   public url:string;
+  public fakeurl:string
   constructor(public _http:HttpClient){
-    this.url="https://reqres.in/";
+    this.fakeurl="https://reqres.in/";
+    this.url="http://localhost:3000/api"
   }
     getUser(user:number):Observable<any>{
-      return this._http.get(this.url+"api/users/"+user);
+      return this._http.get(this.fakeurl+"api/users/"+user);
     }
-
     sendContact(contactData:any):Observable<any>{
-      this.url="http://localhost:3000/api/contact"
-      return this._http.post(this.url,contactData);
+      return this._http.post(this.url+"/contact",contactData);
     }
-    getlogin(user:string,password:string):Observable<any>{
-      this.url="http://localhost:3000/api/login/"
-      return this._http.get(this.url+user+"/"+password);
+    login(LoginData:any):Observable<any>{
+      console.log(LoginData);
+      return this._http.post(this.url+"/login",LoginData);
     }
     getUsers():Observable<any>{
-      this.url="http://localhost:3000/api/users"
-      return this._http.get(this.url);
+      return this._http.get(this.url+"/users");
     }
 
   }

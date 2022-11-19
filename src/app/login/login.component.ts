@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RequestService } from '../services/requests.service';
+import { Login } from '../models/login';
 
 @Component({
   selector: 'app-login',
@@ -14,21 +15,25 @@ export class LoginComponent implements OnInit {
   public password:string="";
   public error:boolean=false
   public errorcatched:string=""
+  private logdata:Login
 
-  constructor(private _http:RequestService) {this.login=false;}
+  constructor(private _http:RequestService) {this.login=false;
+  this.logdata=new Login("","");
+  }
   ngOnInit(): void {
 
   }
-  getLogin(user:string,password:string){
+  getLogin(){
+    this.logdata=new Login(this.user,this.password);
     this.error=false;
     this.user="";
     this.password="";
-    this._http.getlogin(user,password).subscribe(
+    this._http.login(this.logdata).subscribe(
       response=>{
         this.login=true;
         this.activeusers=response;
         this.getUsers()
-        return this.user=user;
+        //return this.user=user;
       },
       (err)=>{this.error=true,this.errorcatched=(err.error.message)}
       ); }
