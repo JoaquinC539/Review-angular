@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   public activeusers:any;
   public password:string="";
   public error:boolean=false
-  public errorcatched:string=""
+  public errorcatched:any
   private logdata:Login
 
   constructor(private _http:RequestService) {this.login=false;

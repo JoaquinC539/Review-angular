@@ -19,7 +19,6 @@ export class RequestService{
       return this._http.post(this.url+"/contact",contactData);
     }
     login(LoginData:any):Observable<any>{
-      console.log(LoginData);
       return this._http.post(this.url+"/login",LoginData);
     }
     getUsers():Observable<any>{
