@@ -5,22 +5,21 @@ font-family: Verdana, Geneva, Tahoma, sans-serif;
 font-size: 25px;
 color: rgb(61, 17, 17);
 }
-
-
-
 .form{
   padding: 20px;
   border: solid rgb(231, 106, 23);
-  display: inline-block;
+  height: 300px;
+
 }
 .form label{
-margin-top: 10px;
+margin-top: 40px;
 text-indent: 3px;
 font-size: larger;
 }
 .form input{
   margin:7px;
   width: 200px;
+
 }
 .sbutton{
   height: 25px;
@@ -32,32 +31,35 @@ align-items: center;
   color: aquamarine;
   margin-right: 8x;
 }
-
-#slider-container{
-  display: block;
-  width: 700px;
-
-}
-.bxslider img{
-  height: 400px;
-  width: 700px;
-}
-.to-align{
-  display:inline-block;
-  padding: 20px;
-}
-#parent{
-  display: flex;
-  height: 480;
-}
-#slider-container{
-  margin-left: 200px;
-}
-h2{
+#parent{    background-color: rgba(252, 242, 214, 0.8);
+    padding: 10px;
+    border: 3px solid;
+    border-color: rgb(26, 80, 33);
+    margin: 0.5rem;
+  }
+h1{
   margin-left: 8px;
   font-size: 25px;
   color: rgb(190, 64, 18);
 }
-#snail{
-display: inline-block;
+.form-parent{
+  width: 300px;
+  display: inline-block;
+  line-height: 20px;
+  position: relative;
 }
+.slider img {
+  width: 100%;
+  height: 100%;
+
+}
+.slider-parent{
+  padding: 3rem;
+  display: inline-block;
+  width: 65%;
+  position: relative;
+  vertical-align: top;
+
+}
+
+

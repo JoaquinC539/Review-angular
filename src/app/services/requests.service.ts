@@ -10,7 +10,7 @@ export class RequestService{
   public fakeurl:string
   constructor(public _http:HttpClient){
     this.fakeurl="https://reqres.in/";
-    this.url="http://localhost:3000/api"
+    this.url="https://review-backend.onrender.com/api"
   }
     getUser(user:number):Observable<any>{
       return this._http.get(this.fakeurl+"api/users/"+user);

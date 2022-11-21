@@ -36,3 +36,14 @@ mat-slider{
   width: 180px;
   height: 30px;
 }
+.parent{
+  background-color: rgba(252, 242, 214, 0.8);
+  padding: 10px;
+  border: 3px solid;
+  border-color: rgb(26, 80, 33);
+  margin: 0.5rem;
+}
+
+hr{
+  color: rgb(236,156,8);
+}

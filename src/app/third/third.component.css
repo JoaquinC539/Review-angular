@@ -1,0 +1,23 @@
+.btn{
+  margin-left: 10px;
+}
+.parent{
+  background-color: rgba(252, 242, 214, 0.8);
+  padding: 10px;
+  border: 3px solid;
+  border-color: rgb(26, 80, 33);
+  margin: 0.5rem;
+}
+hr{
+  color: rgb(236,156,8);
+}
+.imgapi{
+  padding: 3px;
+  margin-left: 10%;
+  height: 10rem;
+  border: 0.1rem solid brown;
+}
+.date{
+  font-size: 1.4rem;
+}
+

@@ -19,10 +19,13 @@ export class ContactComponent implements OnInit {
   }
   ngOnInit(): void {
     $(function(){
-      $('.bxslider').bxSlider({
-        mode: 'fade',
-        captions: true,
-        slideWidth: 1000
+      $('.slider').bxSlider({
+        //mode:"fade",
+        auto:true,
+        captions:true,
+        slideWidth:600,
+        stopAutoOnClick:true,
+        slideHeight:500
       });
     });
   }

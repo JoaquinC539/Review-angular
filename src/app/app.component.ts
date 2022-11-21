@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-
+import { Component,OnInit } from '@angular/core';
 import {configCSS} from './models/styleModels';
 
 
@@ -16,20 +15,14 @@ export class AppComponent {
   public componentb:boolean=true;
   public config:any;
   public description:string;
-
+  public screenwidth:any;
+  public screenHeight:any
 
   constructor(){
 
     this.config=configCSS;
     this.description=this.config.description;
-
-
-
   }
-
-  /**
-   * hideComponent
-   */
   public hideComponent() {
     this.componentb=false;
   }

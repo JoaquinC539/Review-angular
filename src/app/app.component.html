@@ -1,8 +1,6 @@
-<section class="container">
 
-<div [ngStyle]="{'background':config.background, 'border':config.border}">
-
-<h2>Bienvenido al proyecto </h2>
+<div class="container" >
+<h1 id="title">Proyecto tecnico angular<span><a href="https://joaquinc539.github.io/Review/"><i class="fa fa-home"></i></a></span></h1>
 <nav class="navMenu">
   <ol>
     <li><a [routerLink]="['/Home']" [routerLinkActive]="['linkactive']">Home</a></li>
@@ -13,13 +11,8 @@
     <li><a [routerLink]="['/login']" [routerLinkActive]="['linkactive']" class="login">Login</a></li>
   </ol>
 </nav>
+<div class="outlet-container"><router-outlet></router-outlet><footer class="footer">Contactame¡¡ <span>cjoaquinangel@gmail.com</span></footer></div>
 
-<router-outlet></router-outlet>
-<footer class="footer">Contactame¡¡ <span>cjoaquinangel@gmail.com</span></footer>
-</div>
-
-
-</section>
 
 
 

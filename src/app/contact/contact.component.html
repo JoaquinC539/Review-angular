@@ -1,6 +1,7 @@
-<h2>Deja tu contacto¡¡</h2>
+
 <div id="parent">
-<div class="to-align">
+<div class="form-parent">
+  <h1>Deja tu contacto¡¡</h1>
 <form #formContact="ngForm" (ngSubmit)="Submit(formContact);formContact.resetForm()" class="form">
   <label for="name">Nombre</label><br>
   <input type="text" name="name" #name="ngModel" [(ngModel)]="contact.name" required pattern="[a-zA-Z]+"><br>
@@ -19,17 +20,14 @@
     Enviar</button><br>
   <h3 *ngIf="show" class="shoemssg">El contacto a sido enviado¡¡</h3>
 </form>
-<span ><img id="snail" src="./assets/snalbranch.jpg" alt="Sfdfnailbranch"></span>
 </div>
-
-  <div id="slider-container" class="to-align">
-<div class="bxslider">
-  <div><img src="./assets/snail-shell.jpg" ></div>
-  <div><img src="./assets/snailgrass.jpg" ></div>
-  <div><img src="./assets/snails.jpg"></div>
+<div class="slider-parent">
+  <div class="slider">
+    <div><img src="./assets/snail-shell.jpg"></div>
+    <div><img src="./assets/snailgrass.jpg"></div>
+    <div><img src="./assets/snalbranch.jpg"></div>
+  </div>
 </div>
-</div>
-
 </div>
 
 
