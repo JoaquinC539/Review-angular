@@ -4,8 +4,8 @@
 <h5>Usuario: Manuel o Pedro | Password:12345</h5>
   -->
   <h1>Coloca tu usuario</h1><hr>
-  <label for="user">Usuario: </label><br>
-  <input type="text" name="user" [(ngModel)]="email"><br>
+  <label for="user">Email: </label><br>
+  <input type="text" name="email" [(ngModel)]="email"><br>
   <label for="password">Contraseña</label><br>
   <input type="password"name="password" [(ngModel)]="password" (keyup.enter)="signin()"><br>
   <p *ngIf="error">{{error}}</p>
