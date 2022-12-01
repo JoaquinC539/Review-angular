@@ -1,0 +1,23 @@
+<div class="parent">
+  <!--
+<h1>Login para ver los usuarios registrados con cuenta admin(usuarios falsos)</h1>
+<h5>Usuario: Manuel o Pedro | Password:12345</h5>
+  -->
+  <h1>Coloca tu usuario</h1><hr>
+  <label for="user">Usuario: </label><br>
+  <input type="text" name="user" [(ngModel)]="email"><br>
+  <label for="password">Contraseña</label><br>
+  <input type="password"name="password" [(ngModel)]="password" (keyup.enter)="signin()"><br>
+  <p *ngIf="error">{{error}}</p>
+  <button (click)="signin()">Entrar</button><br><br>
+  <h4>No tienes cuenta?</h4>
+  <h4>Crea una!</h4>
+  <button (click)="signup()">Crear cuenta</button>
+
+  </div>
+
+
+
+
+
+

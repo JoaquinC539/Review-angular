@@ -1,0 +1,11 @@
+.done{
+  color: green;
+}
+.pending{
+  color: brown;
+}
+.icon{
+  font-size: 27px;
+  align-content: center;
+  margin-left: 9px;
+}

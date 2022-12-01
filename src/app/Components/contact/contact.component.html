@@ -1,0 +1,37 @@
+
+<div id="parent">
+<div class="form-parent">
+  <h1>Deja tu contacto¡¡</h1>
+<form #formContact="ngForm" (ngSubmit)="Submit(formContact);formContact.resetForm()" class="form">
+  <label for="name">Nombre</label><br>
+  <input type="text" name="name" #name="ngModel" [(ngModel)]="contact.name" required pattern="[a-zA-Z]+"><br>
+  <label for="name">Apellido</label><br>
+  <input type="text" name="name" #last_name="ngModel" [(ngModel)]="contact.last_name" required pattern="[a-zA-Z]+"><br>
+  <span *ngIf="name.touched && !name.valid">El apellido es obligatorio <br></span>
+  <label for="email">Email</label><br>
+  <input type="email" name="email" #email="ngModel" [(ngModel)]="contact.email" required=""><br>
+  <span *ngIf="email.touched && !email.valid">El email no es valido <br></span>
+  <label for="message">Mensaje</label><br>
+  <input  rows="5" id="area"type="textaraea" name="message" #message="ngModel" [(ngModel)]="contact.message" required="[a-zA-Z]+"><br >
+  <span *ngIf="message.touched && !message.valid">El mensaje es obligatorio <br></span>
+  <label for="name">Web (opcional)</label><br>
+  <input type="text" name="webs" #webs="ngModel" [(ngModel)]="contact.webs"><br>
+  <button type="submit" [disabled]="!formContact.form.valid" class="sbutton"><i class=" plane fa fa-paper-plane" aria-hidden="true"></i>
+    Enviar</button><br><br>
+    <p *ngIf="error">{{error}}</p>
+  <h3 *ngIf="show" class="shoemssg">El contacto a sido enviado¡¡</h3>
+</form>
+</div>
+<div class="slider-parent">
+  <div class="slider">
+    <div><img src="./assets/snail-shell.jpg"></div>
+    <div><img src="./assets/snailgrass.jpg"></div>
+    <div><img src="./assets/snalbranch.jpg"></div>
+  </div>
+</div>
+</div>
+
+
+
+
+

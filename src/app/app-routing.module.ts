@@ -1,13 +1,16 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FirstComponent } from './Primer componente/First.component';
-import { HooksComponent } from './hooks/hooks.component';
-import { SingersComponent } from './singers/singers.component';
-import { ThirdComponent } from './third/third.component';
-import { HomeComponent } from './home/home.component';
-import { ContactComponent } from './contact/contact.component';
-import { LoginComponent } from './login/login.component';
-import { SecondComponent } from './second/second.component';
+import { FirstComponent } from './Components/Primer componente/First.component';
+import { HooksComponent } from './Components/hooks/hooks.component';
+import { SingersComponent } from './Components/singers/singers.component';
+import { ThirdComponent } from './Components/third/third.component';
+import { HomeComponent } from './Components/home/home.component';
+import { ContactComponent } from './Components/contact/contact.component';
+import { LoginComponent } from './Components/login/login.component';
+import { SecondComponent } from './Components/second/second.component';
+import { DashComponent } from './Components/dash/dash.component';
+import { AccountComponent } from './Components/account/account.component';
+import { DashGuard } from './dash.guard';
 
 const routes:Routes=[
 
@@ -17,7 +20,9 @@ const routes:Routes=[
   {path:"Home",component:HomeComponent},
   {path:"Third",component:ThirdComponent},
   {path:"Contact",component:ContactComponent},
-  {path:"login",component:LoginComponent}
+  {path:"login",component:LoginComponent},
+  {path:"dash",component:DashComponent,canActivate:[DashGuard]},
+  {path:"signup",component:AccountComponent}
 
 ];
 
@@ -29,6 +34,6 @@ const routes:Routes=[
 })
 export class AppRoutingModule { }
 export const routingComponents=[FirstComponent,HooksComponent,SecondComponent,SingersComponent,ThirdComponent,HomeComponent,ContactComponent,
-  LoginComponent];
+  LoginComponent,DashComponent,AccountComponent];
 export const appRoutingProviders:any[]=[];
 

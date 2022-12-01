@@ -1,0 +1,21 @@
+
+.background{
+  height: 35rem;
+  background-image: url("../../../assets/orange.jpg");
+  background-size:  cover;
+  display: grid;
+  padding: 1rem;
+  place-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#welcome{
+font-size: 2.5rem;
+color: aliceblue;
+
+
+top: 28%;
+left: 26%;
+font-weight: bold;
+}

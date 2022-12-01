@@ -7,12 +7,19 @@ import {HttpClientModule} from "@angular/common/http";
 import { AppComponent } from './app.component';
 import { HighlightDirective} from './Directives/highlight.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CookiesService } from './services/cookies.service';
+import { RequestService } from './services/requests.service';
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
     HighlightDirective,
+
+
 
   ],
   imports: [
@@ -23,7 +30,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatSliderModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [CookiesService,RequestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

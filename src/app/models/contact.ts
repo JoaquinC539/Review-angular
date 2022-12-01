@@ -4,7 +4,7 @@ constructor(
   public last_name:string,
   public email:string,
   public message:string,
-  public webs:[string]
+  public webs:string
 ){
 
 }
